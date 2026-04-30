@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CakeMood — торты на заказ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="#">CakeMood</a>
+      <nav class="nav">
+        <a href="#about">О нас</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#order">Заказ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="tag">Торты на заказ</p>
+          <h1>Сладкие торты для любого праздника</h1>
+          <p class="subtitle">
+            CakeMood — простой сервис заказа тортов. Выбирайте дизайн, вкус и вес,
+            оставляйте заявку и получайте торт для вашего события.
+          </p>
+          <a class="btn" href="#order">Оставить заявку</a>
+        </div>
+        <div class="hero-card">
+          <div class="cake-preview">
+            <div class="layer top"></div>
+            <div class="layer middle"></div>
+            <div class="layer bottom"></div>
+          </div>
+          <p>Красивый торт — хорошее настроение 🎂</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2>Почему выбирают нас</h2>
+        <div class="features">
+          <article class="card">
+            <h3>Индивидуальный дизайн</h3>
+            <p>Подбираем оформление торта под день рождения, свадьбу, выпускной или любой другой праздник.</p>
+          </article>
+          <article class="card">
+            <h3>Свежие ингредиенты</h3>
+            <p>Используем качественные продукты и готовим торты под заказ.</p>
+          </article>
+          <article class="card">
+            <h3>Удобная заявка</h3>
+            <p>Выберите параметры торта и оставьте контакты в форме на сайте.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="catalog">
+      <div class="container">
+        <h2>Популярные варианты</h2>
+        <div class="catalog">
+          <article class="product-card">
+            <div class="product-image pink"></div>
+            <h3>Ягодный торт</h3>
+            <p>Нежный крем, ванильные коржи и свежие ягоды.</p>
+            <span>от 1800 ₽</span>
+          </article>
+          <article class="product-card">
+            <div class="product-image beige"></div>
+            <h3>Свадебный торт</h3>
+            <p>Элегантный дизайн в светлых оттенках для особого дня.</p>
+            <span>от 3500 ₽</span>
+          </article>
+          <article class="product-card">
+            <div class="product-image brown"></div>
+            <h3>Шоколадный торт</h3>
+            <p>Насыщенный шоколадный вкус для любителей классики.</p>
+            <span>от 2200 ₽</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <div class="container">
+        <h2>Оставить заявку</h2>
+        <form class="order-form">
+          <div class="form-grid">
+            <label>
+              Ваше имя
+              <input type="text" placeholder="Введите имя">
+            </label>
+            <label>
+              Телефон
+              <input type="tel" placeholder="+7 (___) ___-__-__">
+            </label>
+            <label>
+              Вид торта
+              <select>
+                <option>Ягодный</option>
+                <option>Шоколадный</option>
+                <option>Свадебный</option>
+                <option>Детский</option>
+              </select>
+            </label>
+            <label>
+              Вес
+              <select>
+                <option>1 кг</option>
+                <option>2 кг</option>
+                <option>3 кг</option>
+                <option>4 кг</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Комментарий к заказу
+            <textarea rows="5" placeholder="Опишите пожелания по дизайну, вкусу и дате"></textarea>
+          </label>
+          <button class="btn" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 CakeMood — торты на заказ</p>
+    </div>
+  </footer>
+</body>
+</html>
