@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { useCakes } from '../../composables/useCakes'
+import { getPublicAssetUrl } from '../../composables/usePublicAsset'
 
 const cakesStore = useCakes()
 </script>
@@ -8,7 +9,7 @@ const cakesStore = useCakes()
 <template>
   <section class="admin-list">
     <article v-for="cake in cakesStore.cakeList.value" :key="cake.id" class="admin-row">
-      <img :src="cake.image" :alt="cake.title">
+      <img :src="getPublicAssetUrl(cake.image)" :alt="cake.title">
 
       <div>
         <h3>{{ cake.title }}</h3>

@@ -13,7 +13,7 @@ const form = reactive({
   category: cake ? cake.category : '',
   weight: cake ? cake.weight : '',
   price: cake ? cake.price : '',
-  image: cake ? cake.image : '/images/3.png',
+  image: cake ? cake.image : 'images/3.png',
   short: cake ? cake.short : '',
   description: cake ? cake.description : '',
   composition: cake ? cake.composition : ''
@@ -116,10 +116,10 @@ function saveCake() {
         <label>
           Картинка
           <select v-model="form.image">
-            <option value="/images/3.png">Индивидуальный торт</option>
-            <option value="/images/2.png">Шоколадный торт</option>
-            <option value="/images/1.png">Ягодный торт</option>
-            <option value="/images/6.png">Праздничный торт</option>
+            <option value="images/3.png">Индивидуальный торт</option>
+            <option value="images/2.png">Шоколадный торт</option>
+            <option value="images/1.png">Ягодный торт</option>
+            <option value="images/6.png">Праздничный торт</option>
           </select>
         </label>
 

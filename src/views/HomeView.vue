@@ -1,5 +1,8 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { getPublicAssetUrl } from '../composables/usePublicAsset'
+
+const heroImage = getPublicAssetUrl('images/4.png')
 </script>
 
 <template>
@@ -21,7 +24,7 @@ import { RouterLink } from 'vue-router'
         </div>
 
         <div class="hero-card">
-          <img src="/images/4.png" alt="Торт">
+          <img :src="heroImage" alt="Торт">
         </div>
       </div>
     </section>

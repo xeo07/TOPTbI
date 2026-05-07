@@ -1,9 +1,11 @@
 <script setup>
 import { RouterLink, useRouter } from 'vue-router'
 import { useUsers } from '../composables/useUsers'
+import { getPublicAssetUrl } from '../composables/usePublicAsset'
 
 const router = useRouter()
 const usersStore = useUsers()
+const logoImage = getPublicAssetUrl('images/logo.png')
 
 function logout() {
   usersStore.logoutUser()
@@ -15,8 +17,7 @@ function logout() {
   <header class="site-header">
     <div class="container header-inner">
       <RouterLink :to="{ name: 'home' }" class="brand">
-        <span class="brand-mark">Т</span>
-        <span>Проект: ТОРТЫ</span>
+        <img class="brand-logo" :src="logoImage" alt="ПРОЕКТ: ТÓРТЫ">
       </RouterLink>
 
       <nav class="nav">

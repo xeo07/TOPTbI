@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useRoute, RouterLink, RouterView } from 'vue-router'
 import { useCakes } from '../composables/useCakes'
 import { useFavorites } from '../composables/useFavorites'
+import { getPublicAssetUrl } from '../composables/usePublicAsset'
 
 const route = useRoute()
 const cakesStore = useCakes()
@@ -15,7 +16,7 @@ const cake = computed(() => cakesStore.getCakeById(route.params.id))
   <main class="section">
     <div class="container">
       <div v-if="cake" class="detail">
-        <img :src="cake.image" :alt="cake.title">
+        <img :src="getPublicAssetUrl(cake.image)" :alt="cake.title">
 
         <div>
           <p class="eyebrow">{{ cake.category }}</p>

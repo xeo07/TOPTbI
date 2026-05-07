@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { useFavorites } from '../composables/useFavorites'
+import { getPublicAssetUrl } from '../composables/usePublicAsset'
 
 const props = defineProps({
   cake: Object
@@ -16,7 +17,7 @@ function sendSelect() {
 
 <template>
   <article class="cake-card">
-    <img :src="cake.image" :alt="cake.title">
+    <img :src="getPublicAssetUrl(cake.image)" :alt="cake.title">
 
     <div class="cake-card-body">
       <div class="cake-top">
