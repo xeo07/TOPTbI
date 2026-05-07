@@ -21,7 +21,7 @@ import { RouterLink } from 'vue-router'
         </div>
 
         <div class="hero-card">
-          <img src="/images/cake-main.svg" alt="Торт">
+          <img src="/images/4.png" alt="Торт">
         </div>
       </div>
     </section>

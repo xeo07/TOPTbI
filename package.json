@@ -1,6 +1,6 @@
 {
   "name": "project_torti",
-  "homepage": "https://github.com/xeo07/TOPTbI",
+  "homepage": "https://xeo07.github.io/TOPTbI",
   "version": "1.0.4",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
