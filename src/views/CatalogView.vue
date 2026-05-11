@@ -55,6 +55,20 @@ const filteredCakes = computed(() => {
         </button>
       </div>
 
+      <div class="catalog-controls">
+        <input
+          v-model="searchQuery"
+          type="text"
+          placeholder="Найти торт по названию"
+        >
+      
+        <select v-model="sortType">
+          <option value="default">Без сортировки</option>
+          <option value="priceAsc">Сначала дешевле</option>
+          <option value="priceDesc">Сначала дороже</option>
+        </select>
+      </div>
+      
       <div class="cards-grid">
         <CakeCard
           v-for="cake in filteredCakes"
