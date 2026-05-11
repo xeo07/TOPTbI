@@ -250,7 +250,11 @@ function closeModal() {
 
           <label>
             Картинка-референс
-            <input type="file" @change="readReference">
+            <input
+  type="file"
+  accept="image/*"
+  @change="readReference"
+>
           </label>
 
           <label>
