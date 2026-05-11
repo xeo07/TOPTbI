@@ -5,6 +5,13 @@ import { useUsers } from '../composables/useUsers'
 
 const ordersStore = useOrders()
 const usersStore = useUsers()
+const statuses = [
+  'Новая заявка',
+  'В работе',
+  'Готовится',
+  'Готов к выдаче',
+  'Завершён'
+]
 
 const userOrders = computed(() => {
   if (usersStore.isAdmin.value) {
