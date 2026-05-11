@@ -19,7 +19,7 @@ const heroImage = getPublicAssetUrl('images/4.png')
 </p>
 
           <div class="hero-actions">
-            <RouterLink class="button" :to="{ name: 'catalog' }">Каталог примеров</RouterLink>
+            <RouterLink class="button" :to="{ name: 'catalog' }">Каталог тортов</RouterLink>
             <RouterLink class="button secondary" :to="{ name: 'constructor' }">Открыть конструктор</RouterLink>
           </div>
         </div>
