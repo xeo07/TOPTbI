@@ -15,9 +15,9 @@ import { RouterLink } from 'vue-router'
 
       <div>
         <h4>Разделы</h4>
-        <p>Каталог</p>
-        <p>Конструктор</p>
-        <p>Личный кабинет</p>
+        <RouterLink :to="{ name: 'catalog' }">Каталог</RouterLink>
+<RouterLink :to="{ name: 'constructor' }">Конструктор</RouterLink>
+<RouterLink :to="{ name: 'profile' }">Личный кабинет</RouterLink>
       </div>
 
       <div>
