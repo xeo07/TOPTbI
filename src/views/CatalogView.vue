@@ -1,19 +1,37 @@
 <script setup>
 import { ref, computed } from 'vue'
-import CakeCard from '../components/CakeCard.vue'
-import { useCakes } from '../composables/useCakes'
+import { useCakesStore } from '../stores/useCakesStore'
 
-const cakesStore = useCakes()
+const cakesStore = useCakesStore()
+
 const selectedCategory = ref('Все')
+const searchQuery = ref('')
+const sortType = ref('default')
 
 const categories = ['Все', 'Шоколадные', 'Муссовые', 'Классические', 'Праздничные']
 
 const filteredCakes = computed(() => {
-  if (selectedCategory.value === 'Все') {
-    return cakesStore.cakeList.value
+  let result = cakesStore.cakeList.value
+
+  if (selectedCategory.value !== 'Все') {
+    result = result.filter((cake) => cake.category === selectedCategory.value)
   }
 
-  return cakesStore.cakeList.value.filter((cake) => cake.category === selectedCategory.value)
+  if (searchQuery.value.trim()) {
+    result = result.filter((cake) =>
+      cake.title.toLowerCase().includes(searchQuery.value.toLowerCase())
+    )
+  }
+
+  if (sortType.value === 'priceAsc') {
+    result = [...result].sort((a, b) => a.price - b.price)
+  }
+
+  if (sortType.value === 'priceDesc') {
+    result = [...result].sort((a, b) => b.price - a.price)
+  }
+
+  return result
 })
 </script>
 
