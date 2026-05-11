@@ -5,7 +5,6 @@ import { useCakes } from '../composables/useCakes'
 
 const cakesStore = useCakes()
 const selectedCategory = ref('Все')
-const selectedMessage = ref('')
 
 const categories = ['Все', 'Шоколадные', 'Муссовые', 'Классические', 'Праздничные']
 
