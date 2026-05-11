@@ -15,10 +15,6 @@ const filteredCakes = computed(() => {
 
   return cakesStore.cakeList.value.filter((cake) => cake.category === selectedCategory.value)
 })
-
-function closeModal() {
-  selectedMessage.value = ''
-}
 </script>
 
 <template>
