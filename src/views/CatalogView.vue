@@ -16,10 +16,6 @@ const filteredCakes = computed(() => {
   return cakesStore.cakeList.value.filter((cake) => cake.category === selectedCategory.value)
 })
 
-function showSelected(title) {
-  selectedMessage.value = 'Вы открыли торт: ' + title
-}
-
 function closeModal() {
   selectedMessage.value = ''
 }
