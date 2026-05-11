@@ -170,19 +170,31 @@ function closeModal() {
         <form class="form" @submit.prevent="sendOrder" novalidate>
           <label>
             Имя
-            <input v-model="form.name" type="text">
+            <input
+  v-model="form.name"
+  type="text"
+  placeholder="Введите ваше имя"
+>
             <span class="error" v-if="errors.name">{{ errors.name }}</span>
           </label>
 
           <label>
             Телефон
-            <input v-model="form.phone" type="text">
+            <input
+  v-model="form.phone"
+  type="tel"
+  placeholder="+7 900 000-00-00"
+>
             <span class="error" v-if="errors.phone">{{ errors.phone }}</span>
           </label>
 
           <label>
             Email
-            <input v-model="form.email" type="text">
+            <input
+  v-model="form.email"
+  type="email"
+  placeholder="example@mail.ru"
+>
             <span class="error" v-if="errors.email">{{ errors.email }}</span>
           </label>
 
