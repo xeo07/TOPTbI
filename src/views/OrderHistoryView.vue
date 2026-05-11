@@ -4,6 +4,7 @@ import { useOrders } from '../composables/useOrders'
 import { useUsers } from '../composables/useUsers'
 import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const ordersStore = useOrders()
 const usersStore = useUsers()
 const statuses = [
@@ -21,6 +22,11 @@ const userOrders = computed(() => {
 
   return ordersStore.getOrdersByUserId(usersStore.currentUser.value.id)
 })
+
+function repeatOrder(order) {
+  localStorage.setItem('repeatOrder', JSON.stringify(order))
+  router.push({ name: 'constructor' })
+}
 </script>
 
 <template>
