@@ -33,6 +33,7 @@ export function useOrders() {
 
     orders.value.push({
       id: newId,
+      createdAt: new Date().toLocaleString('ru-RU'),
       userId: Number(order.userId),
       userLogin: order.userLogin,
       name: order.name,
