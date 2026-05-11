@@ -1,8 +1,9 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { useCakesStore } from '../stores/useCakesStore'
+import CakeCard from '../components/CakeCard.vue'
+import { useCakes } from '../composables/useCakes'
 
-const cakesStore = useCakesStore()
+const cakesStore = useCakes()
 
 const selectedCategory = ref('Все')
 const searchQuery = ref('')
