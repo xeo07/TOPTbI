@@ -270,3 +270,33 @@ textarea {
     font-size: 28px;
   }
 }
+
+.catalog-controls {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.catalog-controls input,
+.catalog-controls select {
+  padding: 12px 16px;
+  border: 1px solid #ead3dc;
+  border-radius: 14px;
+  font-size: 15px;
+  background: #fff;
+  color: #4a2533;
+}
+
+.catalog-controls input:focus,
+.catalog-controls select:focus {
+  outline: none;
+  border-color: #c75c86;
+  box-shadow: 0 0 0 3px rgba(199, 92, 134, 0.15);
+}
+
+@media (max-width: 620px) {
+  .catalog-controls {
+    grid-template-columns: 1fr;
+  }
+}
