@@ -59,6 +59,14 @@ export function useOrders() {
     }
   }
 
+  function updateOrderStatus(id, status) {
+  const order = orders.value.find((order) => order.id === Number(id))
+
+    if (order) {
+      order.status = status
+    }
+  }
+
   return {
     orderList,
     getOrdersByUserId,
