@@ -232,7 +232,7 @@ function closeModal() {
 
           <label>
             Дата получения
-            <input v-model="form.date" type="date">
+            <input v-model="form.date" type="date" :min="today">
             <span class="error" v-if="errors.date">{{ errors.date }}</span>
           </label>
 
