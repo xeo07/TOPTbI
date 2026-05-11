@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 import CakeCard from '../components/CakeCard.vue'
-import ModalWindow from '../components/ModalWindow.vue'
 import { useCakes } from '../composables/useCakes'
 
 const cakesStore = useCakes()
