@@ -347,3 +347,24 @@ button,
   color: #b43f6b;
   background: #fff1f6;
 }
+
+.order-status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff1f6;
+  color: #b43f6b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-select {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ead3dc;
+  border-radius: 999px;
+  background: #fff;
+  color: #5c2f40;
+  font-size: 14px;
+}
