@@ -24,6 +24,21 @@ const form = reactive({
   referenceName: ''
 })
 
+const repeatedOrder = localStorage.getItem('repeatOrder')
+
+if (repeatedOrder) {
+  const order = JSON.parse(repeatedOrder)
+
+  form.shape = order.shape || form.shape
+  form.taste = order.taste || form.taste
+  form.weight = order.weight || form.weight
+  form.filling = order.filling || form.filling
+  form.decor = order.decor || form.decor
+  form.comment = order.comment || form.comment
+
+  localStorage.removeItem('repeatOrder')
+}
+
 const errors = reactive({
   name: '',
   phone: '',
