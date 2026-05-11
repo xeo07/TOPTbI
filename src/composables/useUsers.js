@@ -3,8 +3,8 @@ import { reactive, computed, watch } from 'vue'
 const defaultUsers = [
   {
     id: 1,
-    login: 'admin',
-    password: 'admin123',
+    login: 'dmitriy',
+    password: 'dmitriy123',
     email: 'admin@cakes.ru',
     phone: '+79990000000',
     city: 'Санкт-Петербург',
