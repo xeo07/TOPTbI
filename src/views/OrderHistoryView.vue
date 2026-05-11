@@ -68,6 +68,12 @@ const userOrders = computed(() => {
   </option>
 </select>
             <button class="danger" @click="ordersStore.deleteOrder(order.id)">Удалить</button>
+            <button
+  v-if="!usersStore.isAdmin.value"
+  @click="repeatOrder(order)"
+>
+  Повторить заказ
+</button>
           </div>
         </article>
       </div>
