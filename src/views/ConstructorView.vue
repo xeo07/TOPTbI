@@ -75,6 +75,41 @@ const decorPrices = {
   'Премиум декор': 1500
 }
 
+const presets = [
+  {
+    title: 'Для дня рождения',
+    shape: 'Круглый',
+    taste: 'Шоколадный',
+    weight: 2,
+    filling: 'Клубника',
+    decor: 'Надпись'
+  },
+  {
+    title: 'Для свадьбы',
+    shape: 'Сердце',
+    taste: 'Ванильный',
+    weight: 4,
+    filling: 'Малина',
+    decor: 'Премиум декор'
+  },
+  {
+    title: 'Минималистичный',
+    shape: 'Круглый',
+    taste: 'Красный бархат',
+    weight: 2,
+    filling: 'Карамель',
+    decor: 'Минимализм'
+  }
+]
+
+function applyPreset(preset) {
+  form.shape = preset.shape
+  form.taste = preset.taste
+  form.weight = preset.weight
+  form.filling = preset.filling
+  form.decor = preset.decor
+}
+
 const totalPrice = computed(() => {
   return 1200 +
     Number(form.weight) * 900 +
@@ -82,6 +117,22 @@ const totalPrice = computed(() => {
     tastePrices[form.taste] +
     fillingPrices[form.filling] +
     decorPrices[form.decor]
+})
+
+const discount = computed(() => {
+  if (Number(form.weight) >= 5) {
+    return 500
+  }
+
+  if (Number(form.weight) >= 3) {
+    return 300
+  }
+
+  return 0
+})
+
+const finalPrice = computed(() => {
+  return totalPrice.value - discount.value
 })
 
 function clearErrors() {
@@ -181,6 +232,8 @@ function closeModal() {
           <h1>Соберите торт</h1>
           <p>Выберите параметры торта. Стоимость пересчитывается автоматически.</p>
         </div>
+
+        <div class="preset-list"> <button v-for="preset in presets" :key="preset.title" type="button" class="preset-button" @click="applyPreset(preset)" > {{ preset.title }} </button> </div>
 
         <form class="form" @submit.prevent="sendOrder" novalidate>
           <label>
