@@ -8,6 +8,7 @@ import { useUsers } from '../composables/useUsers'
 const router = useRouter()
 const ordersStore = useOrders()
 const usersStore = useUsers()
+const today = new Date().toISOString().split('T')[0]
 
 const form = reactive({
   name: usersStore.currentUser.value ? usersStore.currentUser.value.login : '',
