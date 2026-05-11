@@ -1,6 +1,7 @@
 import { ref, watch, computed } from 'vue'
 
 const savedOrders = localStorage.getItem('cakeOrders')
+
 let startOrders = []
 
 if (savedOrders) {
@@ -13,9 +14,13 @@ if (savedOrders) {
 
 const orders = ref(startOrders)
 
-watch(orders, (newValue) => {
-  localStorage.setItem('cakeOrders', JSON.stringify(newValue))
-}, { deep: true })
+watch(
+  orders,
+  (newValue) => {
+    localStorage.setItem('cakeOrders', JSON.stringify(newValue))
+  },
+  { deep: true }
+)
 
 export function useOrders() {
   const orderList = computed(() => orders.value)
@@ -61,7 +66,7 @@ export function useOrders() {
   }
 
   function updateOrderStatus(id, status) {
-  const order = orders.value.find((order) => order.id === Number(id))
+    const order = orders.value.find((order) => order.id === Number(id))
 
     if (order) {
       order.status = status
