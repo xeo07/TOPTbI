@@ -368,3 +368,19 @@ button,
   color: #5c2f40;
   font-size: 14px;
 }
+
+.preset-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.preset-button {
+  padding: 10px 16px;
+  border: 1px solid #ead3dc;
+  border-radius: 999px;
+  background: #fff7fa;
+  color: #9f3f64;
+  cursor: pointer;
+}
