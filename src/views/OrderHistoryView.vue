@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useOrders } from '../composables/useOrders'
 import { useUsers } from '../composables/useUsers'
+import { useRouter } from 'vue-router'
 
 const ordersStore = useOrders()
 const usersStore = useUsers()
