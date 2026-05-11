@@ -42,16 +42,8 @@ const filteredCakes = computed(() => {
           v-for="cake in filteredCakes"
           :key="cake.id"
           :cake="cake"
-          @selectCake="showSelected"
         />
       </div>
     </div>
-
-    <ModalWindow
-      v-if="selectedMessage"
-      title="Карточка открыта"
-      :text="selectedMessage"
-      @close="closeModal"
-    />
   </main>
 </template>
