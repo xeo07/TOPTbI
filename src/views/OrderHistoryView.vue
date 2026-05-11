@@ -49,7 +49,24 @@ const userOrders = computed(() => {
 
           <div>
             <strong>{{ order.price }} ₽</strong>
-            <p>{{ order.status }}</p>
+            <p v-if="!usersStore.isAdmin.value" class="order-status">
+  {{ order.status }}
+</p>
+
+<select
+  v-else
+  class="status-select"
+  :value="order.status"
+  @change="ordersStore.updateOrderStatus(order.id, $event.target.value)"
+>
+  <option
+    v-for="status in statuses"
+    :key="status"
+    :value="status"
+  >
+    {{ status }}
+  </option>
+</select>
             <button class="danger" @click="ordersStore.deleteOrder(order.id)">Удалить</button>
           </div>
         </article>
