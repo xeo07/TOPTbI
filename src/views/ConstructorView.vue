@@ -202,7 +202,7 @@ function sendOrder() {
     date: form.date,
     comment: form.comment,
     referenceName: form.referenceName,
-    price: totalPrice.value
+    price: finalPrice.value
   })
 
   success.value = true
@@ -346,7 +346,7 @@ function closeModal() {
 
         <div class="price-box">
           <span>Итоговая стоимость</span>
-          <strong>{{ totalPrice }} ₽</strong>
+          <strong>{{ finalPrice }} ₽</strong>
         </div>
       </aside>
     </div>

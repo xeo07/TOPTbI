@@ -1,5 +1,6 @@
 node_modules
 .npm-cache
+.git-certificates
 dist
 .env
 .DS_Store

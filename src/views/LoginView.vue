@@ -85,7 +85,7 @@ function submitLogin() {
       <aside class="login-help">
         <h2>Тестовые данные</h2>
         <p><b>Пользователь:</b> ivan / ivan123</p>
-        <p><b>Админ:</b> admin / admin123</p>
+        <p><b>Админ:</b> dmitriy / dmitriy123</p>
       </aside>
     </div>
   </main>
