@@ -71,6 +71,7 @@ export function useOrders() {
     orderList,
     getOrdersByUserId,
     addOrder,
-    deleteOrder
+    deleteOrder,
+    updateOrderStatus
   }
 }
